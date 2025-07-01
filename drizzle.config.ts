@@ -4,7 +4,7 @@ import { defineConfig } from "drizzle-kit";
 dotenv.config({ path: ".env.local" });
 
 if (!process.env.DATABASE_URL) {
-  throw new Error("DATABASE_URL is not set");
+  throw new Error("DATABASE_URL is not set in .env.local");
 }
 
 export default defineConfig({
@@ -20,5 +20,5 @@ export default defineConfig({
   },
   verbose: true,
   strict: true,
-  
+
 });
